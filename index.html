@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>MultiCopy - The Ultimate Smart Clipboard Manager for Developers</title>
+    <meta name="description" content="Stop losing code snippets. MultiCopy is a smart Chrome extension that lets you copy multiple items and paste them all at once. Perfect for LeetCode, GitHub, and daily coding.">
+    <meta name="keywords" content="clipboard manager, chrome extension, developer tools, multi copy, productivity, code snippets, leetcode helper">
+    <meta name="author" content="MultiCopy Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://multicopy.github.io/">
+    <meta property="og:title" content="MultiCopy - Smart Clipboard Manager">
+    <meta property="og:description" content="Copy multiple text snippets and paste them all at once. Boost your productivity today.">
+    <meta property="og:image" content="logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="MultiCopy - Smart Clipboard Manager">
+    <meta property="twitter:description" content="The ultimate productivity tool for developers. Save snippets, manage history, and paste smarter.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-slate-200 font-sans selection:bg-brand-500/30">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <img src="logo.png" alt="MultiCopy Logo" class="w-8 h-8 rounded-lg">
+                    <span class="text-xl font-bold tracking-tight text-white">MultiCopy</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-sm font-medium hover:text-brand-400 transition-colors">Features</a>
+                    <a href="#how-it-works" class="text-sm font-medium hover:text-brand-400 transition-colors">How it Works</a>
+                    <a href="#" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all shadow-lg shadow-brand-500/20">Add to Chrome</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="hero-gradient absolute inset-0 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-bold uppercase tracking-widest mb-6">
+                    🚀 Boost Your Workflow
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold text-white tracking-tight mb-8 leading-[1.1]">
+                    Stop Losing Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-violet-400">Code Snippets</span>
+                </h1>
+                <p class="text-lg lg:text-xl text-slate-400 mb-10 leading-relaxed">
+                    MultiCopy is the smart clipboard manager for modern developers. Copy multiple items, manage your history, and paste exactly what you need, when you need it.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all shadow-xl shadow-brand-500/25 flex items-center justify-center gap-2">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.14 14.336c-1.203 0-2.18-.977-2.18-2.18s.977-2.18 2.18-2.18 2.18.977 2.18 2.18-.977 2.18-2.18 2.18zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                        Add to Chrome — Free
+                    </a>
+                    <a href="#how-it-works" class="w-full sm:w-auto glass hover:bg-white/5 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all flex items-center justify-center gap-2">
+                        See How it Works
+                    </a>
+                </div>
+                <div class="mt-12 flex items-center justify-center gap-8 text-slate-500 text-sm font-medium">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        No Data Collection
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Works Offline
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-[#0d0d0d]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl lg:text-5xl font-bold text-white mb-4">Built for Developers</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Everything you need to manage your snippets without leaving your browser.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass p-8 rounded-3xl hover:border-brand-500/50 transition-all group">
+                    <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Multi-Copy History</h3>
+                    <p class="text-slate-400 leading-relaxed">Copy multiple snippets in sequence. MultiCopy stores them all locally, so you never overwrite a useful piece of code.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass p-8 rounded-3xl hover:border-brand-500/50 transition-all group">
+                    <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Smart Shortcuts</h3>
+                    <p class="text-slate-400 leading-relaxed">Use <kbd class="px-2 py-1 bg-slate-800 rounded text-xs font-mono">Alt + S</kbd> to instantly save any selection. Fast, intuitive, and stays out of your way.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass p-8 rounded-3xl hover:border-brand-500/50 transition-all group">
+                    <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Privacy First</h3>
+                    <p class="text-slate-400 leading-relaxed">Your clipboard data never leaves your machine. No cloud syncing, no tracking, just 100% local storage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="how-it-works" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="flex-1">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">How it Works</h2>
+                    <div class="space-y-12">
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center font-bold text-white">1</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Select and Copy</h4>
+                                <p class="text-slate-400">Highlight any text on any website. A small "+ Save" button appears instantly at your cursor.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center font-bold text-white">2</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Build Your List</h4>
+                                <p class="text-slate-400">Keep copying different snippets. MultiCopy builds a list of your recent items in the sidebar.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center font-bold text-white">3</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Paste Smarter</h4>
+                                <p class="text-slate-400">Open the MultiCopy sidebar to manage, edit, or copy back any snippet from your history.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <div class="glass p-4 rounded-[2.5rem] shadow-2xl shadow-brand-500/10">
+                        <!-- Mockup of the Extension UI -->
+                        <div class="bg-[#1a1a1a] rounded-[2rem] overflow-hidden border border-white/5">
+                            <div class="p-4 border-b border-white/5 flex items-center justify-between bg-white/5">
+                                <span class="text-xs font-bold uppercase tracking-widest text-slate-400">MultiCopy History</span>
+                                <div class="flex gap-1">
+                                    <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
+                                    <div class="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+                                    <div class="w-2 h-2 rounded-full bg-green-500/50"></div>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="p-4 bg-brand-500/10 border border-brand-500/20 rounded-xl">
+                                    <code class="text-xs text-brand-300">const solve = (n) => { ... }</code>
+                                </div>
+                                <div class="p-4 bg-white/5 border border-white/10 rounded-xl">
+                                    <code class="text-xs text-slate-400">git commit -m "Fix selection bug"</code>
+                                </div>
+                                <div class="p-4 bg-white/5 border border-white/10 rounded-xl">
+                                    <code class="text-xs text-slate-400">npm install lucide-react</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-brand-600 to-violet-700 rounded-[3rem] p-12 lg:p-20 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                    <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M40 0H0V40" stroke="white" stroke-width="1"/>
+                        </pattern>
+                        <rect width="100%" height="100%" fill="url(#grid)"/>
+                    </svg>
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-extrabold text-white mb-8 relative z-10">Ready to work faster?</h2>
+                <p class="text-brand-100 text-lg lg:text-xl mb-12 max-w-2xl mx-auto relative z-10">Join thousands of developers who have upgraded their clipboard experience.</p>
+                <a href="#" class="inline-flex items-center gap-3 bg-white text-brand-700 px-10 py-5 rounded-2xl text-xl font-bold hover:bg-brand-50 transition-all shadow-2xl relative z-10">
+                    Get MultiCopy for Chrome
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-2">
+                    <img src="logo.png" alt="MultiCopy Logo" class="w-6 h-6 rounded">
+                    <span class="text-lg font-bold text-white">MultiCopy</span>
+                </div>
+                <div class="flex gap-8 text-sm text-slate-500">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="mailto:himmats.1310@gmail.com" class="hover:text-white transition-colors">Support</a>
+                </div>
+                <p class="text-sm text-slate-600">© 2026 MultiCopy. Built for developers.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
